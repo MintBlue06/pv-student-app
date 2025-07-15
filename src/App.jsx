@@ -1,27 +1,21 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./views/HomePage";
+import Footer from "./components/Footer";
+import { Box, Flex } from "@chakra-ui/react";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Router>
-        <div className="app-wrapper">
-          <main className="main-content">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <footer className="app-footer">
-            <p>
-              &copy; {new Date().getFullYear()} Sistema de Gestión de Alumnos.
-              Todos los derechos reservados.
-            </p>
-          </footer>
-        </div>
-      </Router>
-    </>
+    <Flex direction="column" minH="100vh">
+      <Box flex="1" p={4}>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </main>
+      </Box>
+      <Footer />
+    </Flex>
   );
-};
+}
 
 export default App;
