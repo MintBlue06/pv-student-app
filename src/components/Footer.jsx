@@ -1,6 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 
-const Footer = () => (
+export const Footer = () => (
   <Box
     as="footer"
     bg="teal.500"
@@ -16,5 +16,3 @@ const Footer = () => (
     </Text>
   </Box>
 );
-
-export default Footer;

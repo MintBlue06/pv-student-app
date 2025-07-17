@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import Footer from "./components/Footer";
+import { Footer } from "./components/Footer";
 import routesConfig from "./routes";
 import { Box, Flex } from "@chakra-ui/react";
 
