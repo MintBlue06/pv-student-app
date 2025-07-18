@@ -7,7 +7,11 @@ import {
   AlertDialogContent,
   AlertDialogOverlay,
   Button,
+  Icon,
+  Text,
 } from "@chakra-ui/react";
+import { MdCancel } from "react-icons/md";
+import { MdCheckCircle } from "react-icons/md";
 
 export const ConfirmationDialog = ({
   isOpen,
@@ -32,10 +36,16 @@ export const ConfirmationDialog = ({
           <AlertDialogBody>{message}</AlertDialogBody>
           <AlertDialogFooter>
             <Button ref={cancelRef} onClick={onClose}>
-              Cancelar
+              <Icon as={MdCancel} boxSize={[5, 5, 6]} mr={[0, 0, 2]}>
+                <MdCancel />
+              </Icon>
+              <Text display={["none", "none", "block"]}>Cancelar</Text>
             </Button>
             <Button colorScheme="red" onClick={onConfirm} ml={3}>
-              Confirmar
+              <Icon as={MdCheckCircle} boxSize={[5, 5, 6]} mr={[0, 0, 2]}>
+                <MdCheckCircle />
+              </Icon>
+              <Text display={["none", "none", "block"]}>Confirmar</Text>
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
