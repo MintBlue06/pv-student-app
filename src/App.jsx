@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
 import routesConfig from "./routes";
 import { Box, Flex } from "@chakra-ui/react";
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <Flex direction="column" minH="100vh">
       <Box flex="1" p={4}>
+        <NavBar />
         <main>
           <AppRoutes />
         </main>
