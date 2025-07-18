@@ -36,6 +36,7 @@ const StudentListPage = () => {
         <Spacer />
         <Button
           as={RouterLink}
+          to="/alumnos/nuevo"
           colorScheme="teal"
           alignItems="center"
           px={[2, 2, 4]}
