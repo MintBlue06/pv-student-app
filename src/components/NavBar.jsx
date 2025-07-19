@@ -34,7 +34,7 @@ export const NavBar = () => {
       <Flex maxW="container.xl" mx="auto" align="center">
         <Heading as="h1" size="lg">
           <Link as={RouterLink} to="/">
-            Gestión Alumnos
+            <Text>Gestión Alumnos</Text>
           </Link>
         </Heading>
 
@@ -81,7 +81,8 @@ export const NavBar = () => {
             mr={4}
             _hover={{ bg: "teal.600" }}
           >
-            Acerca de
+            <Icon as={MdMenuBook} boxSize={[5, 5, 6]} mr={2} />
+            <Text>Acerca de</Text>
           </Button>
         </Box>
 
@@ -107,7 +108,7 @@ export const NavBar = () => {
                 _hover={{ bg: "teal.600" }}
               >
                 <Icon as={MdHome} mr={2} />
-                Inicio
+                <Text>Inicio</Text>
               </MenuItem>
               <MenuItem
                 as={RouterLink}
@@ -117,7 +118,7 @@ export const NavBar = () => {
                 _hover={{ bg: "teal.600" }}
               >
                 <Icon as={MdPerson} mr={2} />
-                Alumnos
+                <Text>Alumnos</Text>
               </MenuItem>
               <MenuItem
                 as={RouterLink}
@@ -127,7 +128,7 @@ export const NavBar = () => {
                 _hover={{ bg: "teal.600" }}
               >
                 <Icon as={MdPersonAdd} mr={2} />
-                Nuevo
+                <Text>Nuevo</Text>
               </MenuItem>
               <MenuItem
                 as={RouterLink}
@@ -137,7 +138,7 @@ export const NavBar = () => {
                 _hover={{ bg: "teal.600" }}
               >
                 <Icon as={MdMenuBook} mr={2} />
-                Acerca de
+                <Text>Acerca de</Text>
               </MenuItem>
             </MenuList>
           </Menu>

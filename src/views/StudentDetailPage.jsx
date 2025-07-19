@@ -14,7 +14,7 @@ import {
   HStack,
   Icon,
 } from "@chakra-ui/react";
-import { MdArrowBack } from "react-icons/md";
+import { MdArrowBack, MdInfo } from "react-icons/md";
 
 const StudentDetailPage = () => {
   const { id } = useParams();
@@ -44,7 +44,10 @@ const StudentDetailPage = () => {
     <Container maxW="container.md" py={10}>
       <VStack spacing={6} align="stretch">
         <Heading as="h1" size="xl">
-          Detalles del Alumno
+          <HStack>
+            <Icon as={MdInfo} mr={2} />
+            <Text>Detalles del Alumno</Text>
+          </HStack>
         </Heading>
         <Box p={8} bg={boxBg} borderRadius="lg" shadow="md">
           <VStack spacing={4} align="stretch">
@@ -99,9 +102,7 @@ const StudentDetailPage = () => {
               boxSize={[5, 5, 6]}
               mr={[0, 0, 2]}
               verticalAlign="middle"
-            >
-              <MdArrowBack />
-            </Icon>
+            />
             <Text display={["none", "none", "block"]}>Volver a la Lista</Text>
           </Button>
         </Box>

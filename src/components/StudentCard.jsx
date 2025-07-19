@@ -8,9 +8,7 @@ import {
   useColorModeValue,
   Icon,
 } from "@chakra-ui/react";
-import { MdInfo } from "react-icons/md";
-import { MdModeEdit } from "react-icons/md";
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdInfo, MdModeEdit } from "react-icons/md";
 
 export const StudentCard = ({ student, onDelete, onViewDetails, onEdit }) => {
   const cardBg = useColorModeValue("white", "gray.700");
@@ -29,9 +27,7 @@ export const StudentCard = ({ student, onDelete, onViewDetails, onEdit }) => {
         </Text>
         <ButtonGroup justifyContent="flex-end">
           <Button onClick={() => onViewDetails(student.lu)} px={[2, 2, 4]}>
-            <Icon as={MdInfo} boxSize={[5, 5, 6]} mr={[0, 0, 2]}>
-              <MdInfo />
-            </Icon>
+            <Icon as={MdInfo} boxSize={[5, 5, 6]} mr={[0, 0, 2]} />
             <Text display={["none", "none", "block"]}>Detalles</Text>
           </Button>
           <Button
@@ -39,9 +35,7 @@ export const StudentCard = ({ student, onDelete, onViewDetails, onEdit }) => {
             px={[2, 2, 4]}
             colorScheme="yellow"
           >
-            <Icon as={MdModeEdit} boxSize={[5, 5, 6]} mr={[0, 0, 2]}>
-              <MdModeEdit />
-            </Icon>
+            <Icon as={MdModeEdit} boxSize={[5, 5, 6]} mr={[0, 0, 2]} />
             <Text display={["none", "none", "block"]}>Editar</Text>
           </Button>
           <Button
@@ -49,9 +43,7 @@ export const StudentCard = ({ student, onDelete, onViewDetails, onEdit }) => {
             px={[2, 2, 4]}
             colorScheme="red"
           >
-            <Icon as={MdDelete} boxSize={[5, 5, 6]} mr={[0, 0, 2]}>
-              <MdDelete />
-            </Icon>
+            <Icon as={MdDelete} boxSize={[5, 5, 6]} mr={[0, 0, 2]} />
             <Text display={["none", "none", "block"]}>Eliminar</Text>
           </Button>
         </ButtonGroup>

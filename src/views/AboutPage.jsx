@@ -14,10 +14,8 @@ import {
   useColorModeValue,
   HStack,
 } from "@chakra-ui/react";
-import { MdCheckCircle } from "react-icons/md";
-import { AiOutlineGithub } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { MdHome } from "react-icons/md";
+import { MdCheckCircle, MdMenuBook, MdHome } from "react-icons/md";
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 
 const AboutPage = () => {
   const boxBg = useColorModeValue("white", "gray.700");
@@ -29,7 +27,10 @@ const AboutPage = () => {
     <Container maxW="container.md" py={10}>
       <VStack spacing={8}>
         <Heading as="h1" size="xl">
-          Acerca de la Aplicación
+          <HStack>
+            <Icon as={MdMenuBook} mr={[0, 0, 2]} />
+            <Text>Acerca de la Aplicación</Text>
+          </HStack>
         </Heading>
         <Box p={8} bg={boxBg} borderRadius="lg" shadow="md" w="100%">
           <VStack align="start" spacing={4}>
@@ -38,7 +39,7 @@ const AboutPage = () => {
               utilizando tecnologías modernas de React.
             </Text>
             <Heading as="h2" size="md">
-              Tecnologías Utilizadas:
+              <Text>Tecnologías Utilizadas:</Text>
             </Heading>
             <List spacing={3}>
               <ListItem>

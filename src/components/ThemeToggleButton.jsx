@@ -3,6 +3,7 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 export const ThemeToggleButton = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <IconButton
       aria-label="Toggle theme"

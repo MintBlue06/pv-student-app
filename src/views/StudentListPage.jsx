@@ -12,8 +12,9 @@ import {
   Spacer,
   Text,
   Icon,
+  HStack,
 } from "@chakra-ui/react";
-import { MdPersonAdd } from "react-icons/md";
+import { MdHome, MdPerson, MdPersonAdd } from "react-icons/md";
 
 const StudentListPage = () => {
   const { state, deleteStudent } = useStudents();
@@ -31,7 +32,10 @@ const StudentListPage = () => {
     <Container maxW="container.xl" py={10}>
       <Flex mb={8} align="center">
         <Heading as="h1" size="xl">
-          Lista de Alumnos
+          <HStack>
+            <Icon as={MdPerson} mr={2} />
+            <Text>Lista de Alumnos</Text>
+          </HStack>
         </Heading>
         <Spacer />
         <Button
@@ -46,9 +50,7 @@ const StudentListPage = () => {
             boxSize={[5, 5, 6]}
             mr={[0, 0, 2]}
             verticalAlign="middle"
-          >
-            <MdPersonAdd />
-          </Icon>
+          />
           <Text display={["none", "none", "block"]}>Agregar Nuevo Alumno</Text>
         </Button>
       </Flex>
@@ -76,6 +78,15 @@ const StudentListPage = () => {
         title="Confirmar Eliminación"
         message={`¿Estás seguro de que deseas eliminar al alumno ${studentToDelete?.nombre} ${studentToDelete?.apellido}?`}
       />
+      <Button as={RouterLink} to="/" colorScheme="teal" mt={8}>
+        <Icon
+          as={MdHome}
+          boxSize={[5, 5, 6]}
+          mr={[0, 0, 2]}
+          verticalAlign="middle"
+        />
+        <Text display={["none", "none", "block"]}>Volver al Inicio</Text>
+      </Button>
     </Container>
   );
 };
