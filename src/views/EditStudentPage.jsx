@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useStudents } from "../contexts/StudentContext";
-import { StudentForm } from "../components/StudentForm";
+import StudentForm from "../components/StudentForm";
 import { Container, Spinner, Center } from "@chakra-ui/react";
 
 const EditStudentPage = () => {

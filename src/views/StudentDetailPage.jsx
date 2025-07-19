@@ -96,14 +96,12 @@ const StudentDetailPage = () => {
           </VStack>
         </Box>
         <Box textAlign="right">
-          <Button onClick={() => navigate("/alumnos")} colorScheme="teal">
-            <Icon
-              as={MdArrowBack}
-              boxSize={[5, 5, 6]}
-              mr={[0, 0, 2]}
-              verticalAlign="middle"
-            />
-            <Text display={["none", "none", "block"]}>Volver a la Lista</Text>
+          <Button
+            onClick={() => navigate("/alumnos")}
+            colorScheme="teal"
+            leftIcon={<Icon as={MdArrowBack} />}
+          >
+            Volver a la Lista
           </Button>
         </Box>
       </VStack>
